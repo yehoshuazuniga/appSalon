@@ -77,6 +77,7 @@ class ActiveRecord
             if ($columna === 'id') continue;
             $atributos[$columna] = $this->$columna;
         }
+       
 
         return $atributos;
     }
