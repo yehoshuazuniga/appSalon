@@ -190,12 +190,13 @@ class LoginController
         $alertas = [];
         $token = s($_GET['token']);
         $usuario = Usuario::where('token', $token);
+        echo $usuario;
         if (empty($usuario)) {
             //mostrar mensaje de error
             Usuario::setAlerta('error', 'Token no valido');
         } else {
             //modificar a usuario fonfirmado
-            echo 'token valido ';
+           // echo 'token valido ';
             $usuario->confirmado = '1';
             $usuario->token = null;
             $usuario->guardar();
