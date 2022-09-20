@@ -32,14 +32,15 @@ class Email
 
         $mail->setFrom('cuentas@appsalon.com');
         $mail->addAddress('cuentas@appsalon.com', 'Appsalon.com');
-        $mail->Subject='Confirma tu cuenta';
+        $mail->Subject = 'Confirma tu cuenta';
         //set html
         $mail->isHTML(true);
         $mail->CharSet = 'UTF-8';
 
         $contenido = '<html>';
-        $contenido .= '<p><strong>Hola '. ucfirst($this->nombre).' </strong> Has creado tu cuneta en App Salon, solo debes confrimar precionando el siguiente enlace </p>';
-        $contenido .= "<p> Preciona aquí: <a href='http://localhost:3000/confirmar-cuenta?token=$this->token'> Confirmar cuenta</a>";
+        $contenido .= '<p><strong>Hola ' . ucfirst($this->nombre) . ' </strong> Has creado tu cuneta en App Salon, solo debes confrimar precionando el siguiente enlace </p>';
+        $contenido .= "<p> Preciona aquí: <a href='https://polar-woodland-79977.herokuapp.com/confirmar-cuenta?token=$this->token'> Confirmar cuenta</a>";
+        //  $contenido .= "<p> Preciona aquí: <a href='http://localhost:3000/confirmar-cuenta?token=$this->token'> Confirmar cuenta</a>";
         $contenido .= '<p>Si tu no solicitaste esta cuenta , ignora el mensaje</p>';
         $contenido .= '<html>';
 
@@ -47,10 +48,10 @@ class Email
 
         //ENVIAR MAIL
         $mail->send();
-
     }
 
-    public function enviarInstrucciones(){
+    public function enviarInstrucciones()
+    {
         // crear el objeto de email
         $mail = new PHPMailer();
         $mail->isSMTP();
