@@ -208,6 +208,6 @@ class LoginController
         //obtener vistas
         $router->render('auth/confirmar-cuenta', [
             'alertas' => $alertas
-        ]);
+        ]);    
     }
 }
