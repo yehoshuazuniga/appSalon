@@ -196,7 +196,7 @@ class LoginController
             Usuario::setAlerta('error', 'Token no valido');
         } else {
             //modificar a usuario fonfirmado
-           // echo 'token valido ';
+           // echo 'token valido ';git 
             $usuario->confirmado = '1';
             $usuario->token = null;
             $usuario->guardar();
