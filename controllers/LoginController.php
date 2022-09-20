@@ -173,7 +173,7 @@ class LoginController
                 }
             }
         }
-        $router->render('auth/crear-cuenta', [
+        $router->render('auth/crear-cuenta', [    
             'usuario' => $usuario,
             'alertas' => $alertas
         ]);
