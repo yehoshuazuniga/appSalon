@@ -2,6 +2,7 @@
 
 function debuguear($variable): string
 {
+    print_r($_GET);
     echo "<pre>";
     var_dump($variable);
     echo "</pre>";

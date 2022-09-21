@@ -173,7 +173,7 @@ class LoginController
                 }
             }
         }
-        $router->render('auth/crear-cuenta', [    
+        $router->render('auth/crear-cuenta', [      
             'usuario' => $usuario,
             'alertas' => $alertas
         ]);
@@ -188,15 +188,18 @@ class LoginController
     {
 
         $alertas = [];
-        $token = s($_GET['token']);
+        $aux = $_GET['token'] ?? '';
+
+        $token = s($aux);
+
         $usuario = Usuario::where('token', $token);
-        //echo $usuario;
-        if (empty($usuario)) {
+       //echo $usuario;
+        if (empty($usuario)|| empty($token)) {
             //mostrar mensaje de error
             Usuario::setAlerta('error', 'Token no valido');
         } else {
             //modificar a usuario fonfirmado
-           // echo 'token valido ';git 
+           // echo 'token valido ';
             $usuario->confirmado = '1';
             $usuario->token = null;
             $usuario->guardar();
@@ -208,7 +211,6 @@ class LoginController
         //obtener vistas
         $router->render('auth/confirmar-cuenta', [
             'alertas' => $alertas
-        ]);       
+        ]);
     }
 }
-    
