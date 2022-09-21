@@ -1,5 +1,5 @@
 <h1 class="nombre-pagina">Crear nueva cita</h1>
-<p class="descripcion-pagina">Elige tus servicios y oloca tus datos</p>
+<p class="descripcion-pagina">Elige tus servicios y coloca tus datos</p>
 <?php include __DIR__.'/../templates/barra.php';?>
 <div id="app">
 
