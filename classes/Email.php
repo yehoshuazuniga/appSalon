@@ -40,7 +40,7 @@ class Email
         $contenido = '<html>';
         $contenido .= '<p><strong>Hola ' . ucfirst($this->nombre) . ' </strong> Has creado tu cuneta en App Salon, solo debes confrimar precionando el siguiente enlace </p>';
         // $contenido .= "<p> Preciona aquí: <a href='https://polar-woodland-79977.herokuapp.com/confirmar-cuenta?token=$this->token'> Confirmar cuenta</a>";
-        $contenido .= "<p> Preciona aquí: <a href='http://localhost:3000/confirmar-cuenta?token=" . $this->token . "'> Confirmar cuenta</a>";
+        $contenido .= "<p> Preciona aquí: <a href='https://polar-woodland-79977.herokuapp.com/confirmar-cuenta?token=" . $this->token . "'> Confirmar cuenta</a>";
         $contenido .= '<p>Si tu no solicitaste esta cuenta , ignora el mensaje</p>';
         $contenido .= '<html>';
 
