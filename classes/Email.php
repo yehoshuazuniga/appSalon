@@ -70,7 +70,7 @@ class Email
 
         $contenido = '<html>';
         $contenido .= '<p><strong>Hola ' . ucfirst($this->nombre) . ' </strong> Has solicitado restablecer tu password</p>';
-        $contenido .= "<p> Preciona aquí: <a href='http://localhost:3000/recuperar?token=$this->token'> Recuperar password</a>";
+        $contenido .= "<p> Preciona aquí: <a href='https://polar-woodland-79977.herokuapp.com/recuperar?token=$this->token'> Recuperar password</a>";
         $contenido .= '<p>Si tu no solicitaste esta cuenta , ignora el mensaje</p>';
         $contenido .= '<html>';
 
